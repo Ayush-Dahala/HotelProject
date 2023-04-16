@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
+{
+    header("location: login.php");
+}
+
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,7 +48,7 @@
                 </ul>
                 <div class="nav-form">
                     
-                    <a href="#" class="btn"><button id="log">Login</button></a>
+                    <a href="logout.php" class="btn"><button id="log">Logout</button></a>
                     
                 </div>
             </div>
